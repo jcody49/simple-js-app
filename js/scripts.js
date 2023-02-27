@@ -4,5 +4,5 @@ let pokemonList = [
     {name: "Venusaur", height: 2, types: ["grass","poison"]}
 ]; 
 for (let i=0; i < pokemonList.length; i++) {
-    document.write(pokemonList[i].name + height);
+    document.write(pokemonList[i].name +" "+"(Height: "+pokemonList[i].height+" )");
 };
