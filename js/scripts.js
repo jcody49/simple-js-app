@@ -6,12 +6,9 @@ let pokemonRepository = (function () {
       {name: "Venusaur", height: "2 m", types: ["grass","poison"]}
       ]; 
 
-      /*pokemonList.forEach((element, index, array) => {
-      document.write(element.name + ")" + " " + "Height: " + element.height + "," + " Types: " + element.types); 
-      document.write("<br/>")
-      });
+     
 
-      pokemonList.forEach(function(pokemon) {
+      /*pokemonList.forEach(function(pokemon) {
             document.write(pokemon.name + ")" + " " + "Height: " + pokemon.height + "," + " Types: " + pokemon.types); 
             document.write("<br/>")
       });*/
