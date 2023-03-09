@@ -30,9 +30,12 @@ console.log(pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
 
 
 pokemonRepository.getAll().forEach((pokemon) => {
-      let pokemon = document.querySelector('.pokemon-list'); 
-      let listItem = document.createElement('li')
-      let button = document.createElement(button.classList.add(pokemonButtons))
+      let element = document.querySelector('pokemon-list'); 
+      let listItem = document.createElement('li');
+      let button = document.createElement(button.classList.add(pokemonButtons));
+      button.innerText = pokemon.name;
+      li.appendChild(button)
+      unorderedList.appendChild(listItem)
 })
 
 
