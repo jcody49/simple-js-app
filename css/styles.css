@@ -1,29 +1,26 @@
-.pokemon-list:hover,
-.pokemon-list:focus,
-.button:hover,
-.button:focus {
+
+.pokemonButtons:hover,
+.pokemonButtons:focus {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
 }
 
-
-
-
 .pokemonButtons {
-  /* your styling goes here */
+  background-color: rgba(13, 87, 191, 0.828);
   border: none;
-    display: inline-block;
-    /* takes the font from the outer container */
-    font-family: inherit;
-    /* style button */
-    background-color: teal;
-    color: (white);
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    /* width of the border, type, color */
-    border-bottom: 2px solid (darkgray);
-    transition: 0.2s opacity;
+  color: (white);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  font-family: inherit;
+  border-bottom: 2px solid (darkgray);
+  transition: 0.2s opacity;
+  cursor: pointer;
+  border: 2px solid;
 }
+
