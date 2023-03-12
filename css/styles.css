@@ -1,4 +1,12 @@
+.indextitle {
+  text-align: center;
+}
 
+.pokemon-list {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
 .pokemonButtons:hover,
 .pokemonButtons:focus {
     /* lets the mouse appear as a hand when hovering over the button */
