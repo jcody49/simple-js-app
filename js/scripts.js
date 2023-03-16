@@ -58,8 +58,8 @@ pokemonRepository.getAll().forEach((pokemon) => {
 
 /*fetch('https://pokeapi.co/api/v2/pokemon/').then(function(response) {
       return response.json();//this returns a promise
-}).then(function (pokemonList) {
+      }).then(function (pokemonList) {
       console.log(pokemonList);//the actual JSON response
-}).catch(function () {
-//error
+      }).catch(function () {
+      //error
 });*/
