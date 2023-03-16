@@ -91,7 +91,9 @@ let pokemonRepository = (function () {
       return{
             getAll: getAll,
             add: add,
-            addListItem: addListItem
+            addListItem: addListItem,
+            loadList: loadList,
+            loadDetails: loadDetails,
       }
 })();
 console.log(pokemonRepository.getAll()); // []
@@ -106,7 +108,8 @@ pokemonRepository.getAll().forEach((pokemon) => {
 /*fetch('https://pokeapi.co/api/v2/pokemon/').then(function(response) {
       return response.json();//this returns a promise
       }).then(function (pokemonList) {
-      console.log(pokemonList);//the actual JSON response
+      console.log(pokemonList);
+      document.write(pokemonList);//the actual JSON response
       }).catch(function () {
       //error
 });*/
