@@ -11,17 +11,17 @@ let pokemonRepository = (function () {
       }
 
 
-      /*function add (pokemon) {
-            pokemonList.push(pokemon);  
-      }*/
-
       function add (pokemon) {
+            pokemonList.push(pokemon);  
+      }
+
+      /*function add (pokemon) {
             console.log(object.keys(pokemon));
             const fields = Object.keys(pokemon);
             if(typeof pokemon === 'object' && fields.includes('name') && fields.includes('height') && fields.includes('types')) {
                   pokemonList.push(pokemon);
             }
-      }
+      }*/
 
       function addListItem(pokemon) {
             let pokemonList = document.querySelector('.pokemon-list'); 
