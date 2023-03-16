@@ -11,16 +11,17 @@ let pokemonRepository = (function () {
       }
 
 
-      function add (pokemon) {
-            pokemonList.push(pokemon);  
-      }
-
       /*function add (pokemon) {
-            console.log(object.keys(pokemon));
-            if (typeof pokemon === Object && Object.keys(pokemon.includes('name', 'height', 'types'))) {
-                  pokemonList.push(pokemon);
-            } 
+            pokemonList.push(pokemon);  
       }*/
+
+      function add (pokemon) {
+            console.log(object.keys(pokemon));
+            const fields = Object.keys(pokemon);
+            if(typeof pokemon === 'object' && fields.includes('name') && fields.includes('height') && fields.includes('types')) {
+                  pokemonList.push(pokemon);
+            }
+      }
 
       function addListItem(pokemon) {
             let pokemonList = document.querySelector('.pokemon-list'); 
@@ -53,4 +54,12 @@ console.log(pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
 
 pokemonRepository.getAll().forEach((pokemon) => {
       pokemonRepository.addListItem(pokemon);
+});
+
+fetch('https://pokeapi.co/api/v2/pokemon/').then(function(response) {
+      return response.json();//this returns a promise
+}).then(function (pokemonList) {
+      console.log(pokemonList);//the actual JSON response
+}).catch(function () {
+//error
 });
