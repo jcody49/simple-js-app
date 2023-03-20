@@ -7,15 +7,15 @@
   margin-left: auto;
   text-align: center;
 }
-.pokemonButtons:hover,
-.pokemonButtons:focus {
+.pokemonButton:hover,
+.pokemonButton:focus {
     /* lets the mouse appear as a hand when hovering over the button */
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
 }
 
-.pokemonButtons {
+.pokemonButton {
   background-color: rgba(13, 87, 191, 0.828);
   border: none;
   color: (white);
