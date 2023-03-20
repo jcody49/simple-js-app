@@ -123,3 +123,5 @@ pokemonRepository.getAll().forEach((pokemon) => {
       }).catch(function () {
       //error
 });*/
+
+//test
