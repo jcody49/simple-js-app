@@ -32,3 +32,38 @@
   border: 2px solid;
 }
 
+
+
+
+
+/*modal styling*/
+
+.modal {
+  display: none;
+  background: rgba(4, 107, 251, 0.9);
+  color: var(--black);
+}
+
+.modal-content, .modal-header, .modal-body {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.close {
+  font-size: 2em;
+  padding: 0;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.panel {
+  background-color: var(--red);
+  box-shadow: 5px 5px var(--black);
+}
+
+.panel, .light, .screen-frame, .screen {
+  border: 5px solid var(--black);
+}
