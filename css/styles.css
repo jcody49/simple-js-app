@@ -1,48 +1,63 @@
-.indextitle {
-  text-align: center;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.pokemon-list {
-  margin-right: auto;
-  margin-left: auto;
+.index-title {
   text-align: center;
 }
-.pokemonButton:hover,
-.pokemonButton:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-}
-
-.pokemonButton {
-  background-color: rgba(13, 87, 191, 0.828);
+.btn-primary {
+  height: 10vh;
+  font-size: 20px;
+  border-radius: 8px;
   border: none;
-  color: rgba(13, 87, 191, 0.828);
-  padding: 16px 32px;
+  border-right: 0.25vh solid rgba(0, 0, 0, 0.8);
+  border-bottom: 0.5vh solid rgba(0, 0, 0, 0.8);
+  justify-content: center;
+}
+.pokemon-button {
+  text-transform: capitalize;
+  background-color: rgba(74, 145, 245, 0.828);
+  border: none;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  border-bottom: 2px solid (darkgray);
-  transition: 0.2s opacity;
+  margin: 10px;
   cursor: pointer;
-  border: 2px solid;
+  transition-duration: 0.4s;
+  border-radius: 12px;
+}
+.list-group-item {
+  border: none;
+}
+h1 {
+  text-transform: capitalize;
 }
 
-
-
-
-
-
-
-
-html, 
-body {
-  font-family: Arial, sans-serif;
+@media all and (max-width: 420px) {
+  h1 {
+      font-size: 27px;
+  }
 }
+
+@media all and (max-width: 260px) {
+  .btn-primary {
+      justify-content: center;
+      font-size: 1.5vh;
+      height: 7vh;
+  }
+
+  h1 {
+      font-size: 18px;
+  }
+
+  p {
+      font-size: 12px;
+  }
+}
+
+.listItem{
+  color: rgba(74, 145, 245, 0.828);
+}
+
 
 #modal-container {
   display: none;
@@ -101,8 +116,6 @@ body {
 
 
 
-/*modal styling
-
 .modal {
   display: none;
   background: rgba(4, 107, 251, 0.9);
@@ -124,11 +137,94 @@ body {
   cursor: pointer;
 }
 
-.panel {
-  background-color: var(--red);
-  box-shadow: 5px 5px var(--black);
+
+
+
+
+.image-panel, .data-panel {
+  border-top: none;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.panel, .light, .screen-frame, .screen {
-  border: 5px solid var(--black);
-}*/
+.screen-frame {
+  padding: 5%;
+  border-radius: 0 0 0 40px;
+  background-color: var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  border-radius: 20px;
+  padding: 20px;
+  letter-spacing: 0.1em;
+}
+
+.image-screen {
+  background: var(--black);
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-image{
+  width: 60%;
+  height: auto;
+}
+
+/*---Bottom-panel (data screens) ----*/
+
+.name-screen{
+  background-color: var(--green);
+  text-transform: capitalize;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.name-screen h2{
+  font-size: 1.2em;
+  line-height: 0.8em;
+}
+
+.small-screens {
+  gap: 20px;
+  font-size: 0.6em;
+}
+
+.small-screens h3{
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.small-screens ul{
+  list-style: "> ";
+  padding-left: inherit;
+}
+
+.height-screen, .types-screen {
+  background-color: var(--yellow);
+}
+
+.types-screen {
+  text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

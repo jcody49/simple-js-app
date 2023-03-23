@@ -11,21 +11,88 @@
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">   
   </head>
+
+
   <body>
-    <h1 class="indextitle">JC'S Pokedex</h1>
+    <h1 class="index-title">JC'S Pokedex</h1>
     <ul class="pokemon-list"></ul>
 
+    
 
 
-    <button id="show-modal">Show modal</button>
-    <div id="modal-container">
-      <div class="modal">
-        <button class="modal-close">Close</button>
-        <h1>Pokemon</h1>
-        <p>Modal text</p>       
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div><!--Close modal header-->
+          <div class="modal-body pokedex">
+                  <div class="row panel image-panel">
+                    <div class="col screen-frame">
+                      <div class="col screen image-screen">
+                        <img class="img-fluid pokemon-image">
+                      </div><!--Close image-screen-->
+                    </div><!--Close screen-frame-->
+                  </div><!-- Close screen-panel-->
+                  <div class="row panel data-panel">
+                    <div class="col data-screens">
+                        <div class="row screen name-screen">
+                            <h2 class="pokemon-id"></h2>
+                            <h2 class="pokemon-name"></h2>
+                        </div>
+                        <div class="row small-screens">
+                          <div class="col screen height-screen">
+                              <h3>Height:</h3>
+                              <p class="pokemon-height"></p>
+                          </div>
+                          <div class="col screen types-screen">
+                            <h3>Types:</h3>
+                            <ul class="pokemon-types"></ul>
+                          </div> <!--Close small-screens-->
+                      </div> <!-- Close data-screens-->
+                    </div> <!-- Close bottom-panel-->
+                </div> <!--Close container-fluid-->
+            </div> <!--Close pokedex-->
+        </div> <!--Close modal-content-->
+    </div> <!--Close modal-dialog-->
+  </div> <!--Close modal-->
+  <!--End Pokémon Modal-->
+  <div class="row">
+
+</div>
+
+
+
+
+
+    <!--
+    <div id="modal-container" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body"></div>
+
+          <div class="pokemon-image">
+            <div class="pokemon-id">
+              <div class="pokemon-name">
+                <div class="pokemon-height">
+                  <div>
+                    <button class="modal-close">Close</button>
+                    <h1>""</h1>
+                    <p>""</p>
+                  </div>
+                </div>       
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class= "modal-footer"></div>
       </div>
-    </div>
-
+    </div>-->
 
 
 
