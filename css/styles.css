@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(176, 202, 255);
+  background-color: rgb(157, 191, 255);
   font-family: 'Ubuntu', sans-serif;
 }
 
@@ -22,6 +22,7 @@ body {
   justify-content: center;
   color:rgba(0, 0, 0, 0.8);
   background-color: white;
+  margin: 0 auto;
 }
 
 .pokemon-button {
@@ -39,7 +40,9 @@ body {
   cursor: pointer;
   transition-duration: 0.4s;
   border-radius: 12px;
+  margin: 0 auto;
 }
+
 .list-group-item {
   border: none;
   font-family: 'Ubuntu', sans-serif;
@@ -50,29 +53,7 @@ h1 {
   font-family: 'Ubuntu', sans-serif;
 }
 
-@media all and (max-width: 420px) {
-    h1 {
-      text-align: center;
-      font-size: 27px;
-    }
-}
 
-@media all and (max-width: 260px) {
-    .btn-primary {
-      justify-content: center;
-      font-size: 1.5vh;
-      height: 7vh;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 18px;
-    }
-
-    p {
-      font-size: 15px;
-    }
-}
 
 
 .modal-content {
@@ -96,4 +77,88 @@ h1 {
 
 .navbar{
   font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: salmon;
+}
+
+h1{
+  font-weight: bold;
+}
+
+.pokemon-list{
+  padding: 1rem;
+  justify-content: center;
+}
+
+li.pokemon-button{
+  background-color: inherit;
+}
+
+.btn-primary{
+  box-shadow: 0px 1.6px salmon;
+}
+
+.index-title {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 300;
+  margin-bottom: 0.8rem;
+  outline: none;
+  text-align: center;
+  text-shadow: salmon 1px 0 10px;
+}
+
+.index-title:hover {
+  font-variation-settings: "wght" 562; 
+  letter-spacing: 1px;
+}
+
+.modal-title {
+  margin: 0 auto;
+  text-indent: 70px;
+}
+
+.modal-body li{
+  list-style-type: none;
+  display:inline-block;
+  padding-left: 5px;
+}
+
+.modal-footer{
+  width: 100%;
+}
+
+.modal-footer button{
+  margin: 0 auto;
+}
+
+
+@media all and (max-width: 420px) {
+  h1 {
+    text-align: center;
+    font-size: 27px;
+  }
+}
+
+@media all and (max-width: 260px) {
+  .btn-primary {
+    justify-content: center;
+    font-size: 1.5vh;
+    height: 7vh;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 70px;
+    text-size-adjust: 20%;
+  }
+
+  p {
+    font-size: 30px;
+  }
 }

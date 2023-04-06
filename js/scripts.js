@@ -6,7 +6,7 @@ let pokemonRepository = (function () {
       function add(pokemon){ 
             if (typeof pokemon === 'object' &&
             'name' in pokemon &&
-            'detailsUrl' in pokemon) {
+            'detailsUrl' in pokemon /*&& 'item.types' in pokemon*/) {
             pokemonList.push(pokemon);
             } else {
             console.log('Invalid Pokémon');
@@ -92,7 +92,7 @@ let pokemonRepository = (function () {
                   
                   let modalBody = $(".modal-body");
                   let modalTitle = $(".modal-title");
-                  let modalFooter = $(".modal-footer");
+                  
             
                   modalTitle.empty();
                   modalBody.empty();
@@ -101,13 +101,16 @@ let pokemonRepository = (function () {
                   let pokemonImage = $('<img class="modal-img" style="width:50%">');
                   pokemonImage.attr("src", item.imageUrl);
                   let pokemonHeight = $("<p>" + "Height : " + item.height + "</p>");
-                  
+                  let pokemonTypes = $("<p>Types</p><ul>"+item.types.map(item => "<li>"+item.type.name+"</li>")+"</ul>");
 
                   modalTitle.append(pokemonName);
                   modalBody.append(pokemonImage);
                   modalBody.append(pokemonHeight);
+                  modalBody.append(pokemonTypes);
+                  
                   
             })
+
             function hideModal() {
                   let modalContainer = document.querySelector('#modal-container');
                   modalContainer.classList.remove('is-visible');
