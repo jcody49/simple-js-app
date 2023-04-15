@@ -27,9 +27,9 @@ let pokemonRepository = (function () {
             
             let button = document.createElement('button');
             button.innerText= pokemon.name;
-            button.classList.add("btn-block");
-            button.classList.add("btn-primary");
-            button.classList.add("pokemon-button");
+            button.classList.add('btn-block');
+            button.classList.add('btn-primary');
+            button.classList.add('pokemon-button');
             button.setAttribute('data-toggle', 'modal');
             button.setAttribute('data-target', '#exampleModal');
             listItem.classList.add('col-xl-3');
@@ -90,18 +90,18 @@ let pokemonRepository = (function () {
 
             pokemonRepository.loadDetails(item).then(function () {
                   
-                  let modalBody = $(".modal-body");
-                  let modalTitle = $(".modal-title");
+                  let modalBody = $('.modal-body');
+                  let modalTitle = $('.modal-title');
                   
             
                   modalTitle.empty();
                   modalBody.empty();
             
-                  let pokemonName = $("<h1>" + item.name + "</h1>")
+                  let pokemonName = $('<h1>' + item.name + '</h1>')
                   let pokemonImage = $('<img class="modal-img" style="width:50%">');
-                  pokemonImage.attr("src", item.imageUrl);
-                  let pokemonHeight = $("<p>" + "Height : " + item.height + "</p>");
-                  let pokemonTypes = $("<p>Types</p><ul>"+item.types.map(item => "<li>"+item.type.name+"</li>")+"</ul>");
+                  pokemonImage.attr('src', item.imageUrl);
+                  let pokemonHeight = $('<p>' + 'Height : ' + item.height + '</p>');
+                  let pokemonTypes = $('<p>Types</p><ul>'+item.types.map(item => '<li>'+item.type.name+'</li>')+'</ul>');
 
                   modalTitle.append(pokemonName);
                   modalBody.append(pokemonImage);
@@ -111,13 +111,8 @@ let pokemonRepository = (function () {
                   
             })
       
-            window.addEventListener('keydown', (e) => {
-                  let modalContainer = document.querySelector('#modal-container');
-                  if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-                  hideModal();  
-                  }
-            });
-      };
+            
+      }
       
 
       return {
