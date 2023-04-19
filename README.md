@@ -6,8 +6,17 @@ I developed this web app with HTML, JavaScript, and CSS, and I have integrated t
 
 ## Visit
 
-The coolest Pokedex in the universe... [JC'S Pokedex] (https://jcody49.github.io/simple-js-app/#) 
+Visit the coolest Pokedex in the universe... [JC'S Pokedex!](https://jcody49.github.io/simple-js-app/#)
 
+## Sources and Credits
 
+PokéAPI Documentation
+PokéAPI
+Promise Polyfill
+Fetch Polyfill
+Bootstrap
 
+## Interface
 
+![Screenshot of the main page](images/main-page.png)
+![Screenshot of the modal](images/modal.png)

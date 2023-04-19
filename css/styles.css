@@ -164,6 +164,11 @@ li.pokemon-button{
   }
 }
 
+footer{
+  text-align: center;
+  font-size: small;
+}
+
 /*.btn-outline-success{
   background-color: salmon;
   color: white;
