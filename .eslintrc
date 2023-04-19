@@ -8,5 +8,9 @@
     ],
     "rules": {
         "quotes": ["error", "single"]
-    }
+    },
+    "plugins": [
+        "dollar-sign",
+        "jquery"
+    ]
 }
