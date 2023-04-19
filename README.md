@@ -6,8 +6,8 @@ I developed this web app with HTML, JavaScript, and CSS, and I have integrated t
 
 ## Visit
 
-The coolest Pokedex in the universe...
+The coolest Pokedex in the universe... [JC'S Pokedex] (https://jcody49.github.io/simple-js-app/#) 
 
-[JC'S Pokedex] (https://jcody49.github.io/simple-js-app/#)
+
 
 
