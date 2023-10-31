@@ -4,7 +4,11 @@ let pokemonRepository = (function () {
       let itemsPerPage = 20;
       let currentPage = 1;
     
-      // Adds pokémon to the list if it's an object with the right keys
+      /**
+       * Adds a Pokémon to the list if it meets the required criteria.
+       *
+       * @param {Object} pokemon - The Pokémon object to add to the list.
+       */
       function add(pokemon) {
         if (
           typeof pokemon === 'object' &&
@@ -17,12 +21,20 @@ let pokemonRepository = (function () {
         }
       }
     
-      // Gets the list of pokémon
+      /**
+       * Gets the list of Pokémon.
+       *
+       * @returns {Array} The list of Pokémon.
+       */
       function getAll() {
         return pokemonList;
       }
     
-      // Will create list items for each pokemon and turn them into buttons
+      /**
+       * Adds a list item for a Pokémon and associates a click event to show details.
+       *
+       * @param {Object} pokemon - The Pokémon object to add to the list.
+       */
       function addListItem(pokemon) {
         let pokemonList = document.querySelector('.pokemon-list');
         let listItem = document.createElement('li');
@@ -45,6 +57,11 @@ let pokemonRepository = (function () {
         });
       }
     
+      /**
+       * Shows details of a Pokémon in a modal.
+       *
+       * @param {Object} pokemon - The Pokémon object to display details for.
+       */
       function showDetails(pokemon) {
         loadDetails(pokemon).then(function () {
           showModal(pokemon);
@@ -76,20 +93,25 @@ let pokemonRepository = (function () {
         $('#pokemon-modal').modal('show');
       }
     
-      // Renders the Pokémon buttons for the current page
+      /**
+       * Renders the Pokémon list for the current page and handles pagination.
+       */
       function renderPokemonList() {
-            let startIndex = (currentPage - 1) * itemsPerPage;
-            let endIndex = startIndex + itemsPerPage;
-            let currentPokemonList = pokemonList.slice(startIndex, endIndex);
-          
-            let pokemonListElement = document.querySelector('.pokemon-list');
-            pokemonListElement.innerHTML = '';
-          
-            currentPokemonList.forEach(function (pokemon) {
-              addListItem(pokemon);
-            });
-          
-            addPaginationButtons(); // Render the pagination buttons after rendering the Pokémon list
+        let startIndex = (currentPage - 1) * itemsPerPage;
+        let endIndex = startIndex + itemsPerPage;
+        let currentPokemonList = pokemonList.slice(startIndex, endIndex);
+      
+        let pokemonListElement = document.querySelector('.pokemon-list');
+        pokemonListElement.innerHTML = '';
+      
+        currentPokemonList.forEach(function (pokemon) {
+          addListItem(pokemon);
+        });
+      
+        /**
+         * Adds pagination buttons for navigating through the Pokémon list.
+         */
+        addPaginationButtons(); // Render the pagination buttons after rendering the Pokémon list
       }
           
     
@@ -125,14 +147,18 @@ let pokemonRepository = (function () {
         });
       }
     
-      // Sorts the Pokémon list alphabetically
+      /**
+       * Sorts the Pokémon list alphabetically by name.
+       */
       function sortPokemonList() {
         pokemonList.sort(function (a, b) {
           return a.name.localeCompare(b.name);
         });
       }
     
-      // Fetches the pokémon list from the API and adds them as objects
+      /**
+       * Fetches the Pokémon list data from the API and initializes the list.
+       */
       function loadList() {
         return fetch(URL)
           .then(function (response) {
@@ -159,7 +185,12 @@ let pokemonRepository = (function () {
           });
       }
     
-      // Gets data from detailsURL and returns specific details
+      /**
+       * Gets additional details of a Pokémon from its details URL.
+       *
+       * @param {Object} item - The Pokémon object for which to load details.
+       */
+
       function loadDetails(item) {
         let url = item.detailsUrl;
         return fetch(url)
