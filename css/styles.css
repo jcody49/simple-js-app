@@ -195,3 +195,18 @@ footer{
   text-align: center;
   padding: 5px 0;
 }
+
+
+#searchButton {
+  height: 38px; /* You can adjust the height to match the form input */
+}
+
+#searchButton {
+  height: 38px; /* You can adjust the height to match the form input */
+  background-color: salmon; /* Remove the background color */
+  border: none; /* Remove the border */
+}
+
+#searchButton:hover {
+  background-color: transparent; /* Remove hover background color */
+}

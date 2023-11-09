@@ -21,20 +21,20 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Developer Information</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="https://github.com/jcody49?tab=repositories">Developer's Github <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Search</a>
+            <a class="nav-link" href="https://jcody49.github.io/PS2" target="_blank">Developer's Website</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://pokeapi.co/">Pokemon API</a>
+            <a class="nav-link" href="https://pokeapi.co/" target="_blank">Pokemon API</a>
           </li>
           
         </ul>
@@ -43,10 +43,20 @@
 
 
     <div class="form-group">
-      <input id="searchBar" type="text" class="form-control" placeholder="Search...">
-      <button id="searchButton" class="btn btn-primary">Search</button>
+      <form class="input-group">
+        <input id="searchBar" type="text" class="form-control" placeholder="Search...">
+        <div class="input-group-append">
+          <button id="searchButton" class="btn btn-primary btn-sm" type="submit">
+            Search
+          </button>
+        </div>
+      </form>
     </div>
     
+    
+    
+    
+    <div id="result"></div>
     
     <div class="container">
       <div class="row">
